@@ -43,3 +43,18 @@ fun DetailsScreen(
         ) {
 
             Column {
+                DetailField(label = "NAMA LENGKAP", value = nama)
+
+                Spacer(modifier = Modifier.height(16.dp))
+                DetailField(label = "JENIS KELAMIN", value = kelamin)
+
+                Spacer(modifier = Modifier.height(16.dp))
+                DetailField(label = "STATUS PERKAWINAN", value = status)
+
+                Spacer(modifier = Modifier.height(16.dp))
+                DetailField(label = "ALAMAT", value = alamat)
+            }
+
+
+            Column(modifier = Modifier.padding(top = 32.dp)) {
+            }

@@ -109,3 +109,7 @@ fun RegistrationScreen(navController: NavController) {
 
             Button(
                 onClick = {
+                    if (nama.isEmpty() || alamat.isEmpty() || jenisKelamin.isEmpty() || statusPerkawinan.isEmpty()) {
+                        Toast.makeText(context, "Harap isi semua field", Toast.LENGTH_SHORT).show()
+                    } else {
+                }

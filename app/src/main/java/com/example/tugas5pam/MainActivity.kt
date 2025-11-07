@@ -15,4 +15,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             Tugas5PAMTheme {
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = TealAppBg
+                ) {
+            }
         }

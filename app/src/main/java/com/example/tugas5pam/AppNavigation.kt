@@ -49,3 +49,14 @@ fun AppNavigation() {
             val status = backStackEntry.arguments?.getString("status") ?: ""
             val alamat = backStackEntry.arguments?.getString("alamat") ?: ""
 
+            DetailsScreen(
+                navController = navController,
+                nama = nama,
+                kelamin = kelamin,
+                status = status,
+                alamat = alamat
+            )
+        }
+    }
+}
+

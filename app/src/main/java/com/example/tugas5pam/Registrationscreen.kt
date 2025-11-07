@@ -134,6 +134,28 @@ fun RegistrationScreen(navController: NavController) {
         }
     }
 }
-
+@Composable
+fun CustomTextField(
+    value: String,
+    onValueChange: (String) -> Unit,
+    hint: String,
+    modifier: Modifier = Modifier
+) {
+    Box(
+        modifier = modifier
+            .fillMaxWidth()
+            .background(TealFieldBg, RoundedCornerShape(15.dp))
+            .padding(horizontal = 16.dp, vertical = 12.dp)
+    ) {
+        BasicTextField(
+            value = value,
+            onValueChange = onValueChange,
+            textStyle = TextStyle(fontSize = 16.sp, color = Color.Black),
+            modifier = Modifier.fillMaxWidth()
+        )
+        if (value.isEmpty()) {
+            Text(text = hint, color = TextGrey.copy(alpha = 0.7f), fontSize = 16.sp)
+        }
+    }
 }
-                }
+

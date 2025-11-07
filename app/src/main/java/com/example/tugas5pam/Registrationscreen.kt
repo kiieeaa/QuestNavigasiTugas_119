@@ -44,3 +44,68 @@ fun RegistrationScreen(navController: NavController) {
     ) {
         // Header
         AppHeader(title = "Formulir Pendaftaran")
+        Column(modifier = Modifier.padding(24.dp)) {
+
+
+            Text(text = "NAMA LENGKAP", color = TextGrey, fontSize = 14.sp)
+            CustomTextField(
+                value = nama,
+                onValueChange = { nama = it },
+                hint = "Isian nama lengkap",
+                modifier = Modifier.padding(top = 8.dp)
+            )
+
+
+            Text(text = "JENIS KELAMIN", color = TextGrey, fontSize = 14.sp, modifier = Modifier.padding(top = 16.dp))
+            jenisKelaminOptions.forEach { option ->
+                Row(
+                    Modifier
+                        .fillMaxWidth()
+                        .selectable(
+                            selected = (jenisKelamin == option),
+                            onClick = { jenisKelamin = option }
+                        )
+                        .padding(vertical = 4.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    RadioButton(
+                        selected = (jenisKelamin == option),
+                        onClick = { jenisKelamin = option }
+                    )
+                    Text(text = option, modifier = Modifier.padding(start = 8.dp))
+                }
+            }
+
+
+            Text(text = "STATUS PERKAWINAN", color = TextGrey, fontSize = 14.sp, modifier = Modifier.padding(top = 16.dp))
+            statusPerkawinanOptions.forEach { option ->
+                Row(
+                    Modifier
+                        .fillMaxWidth()
+                        .selectable(
+                            selected = (statusPerkawinan == option),
+                            onClick = { statusPerkawinan = option }
+                        )
+                        .padding(vertical = 4.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    RadioButton(
+                        selected = (statusPerkawinan == option),
+                        onClick = { statusPerkawinan = option }
+                    )
+                    Text(text = option, modifier = Modifier.padding(start = 8.dp))
+                }
+            }
+
+
+            Text(text = "ALAMAT", color = TextGrey, fontSize = 14.sp, modifier = Modifier.padding(top = 16.dp))
+            CustomTextField(
+                value = alamat,
+                onValueChange = { alamat = it },
+                hint = "Alamat",
+                modifier = Modifier.padding(top = 8.dp)
+            )
+
+
+            Button(
+                onClick = {

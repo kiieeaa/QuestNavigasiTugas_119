@@ -19,5 +19,11 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = TealAppBg
                 ) {
+                    AppNavigation()
+                }
             }
         }
+    }
+}
+
+

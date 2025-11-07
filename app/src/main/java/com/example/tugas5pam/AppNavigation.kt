@@ -44,4 +44,8 @@ fun AppNavigation() {
                 navArgument("alamat") { type = NavType.StringType }
             )
         ) { backStackEntry ->
+            val nama = backStackEntry.arguments?.getString("nama") ?: ""
+            val kelamin = backStackEntry.arguments?.getString("kelamin") ?: ""
+            val status = backStackEntry.arguments?.getString("status") ?: ""
+            val alamat = backStackEntry.arguments?.getString("alamat") ?: ""
 

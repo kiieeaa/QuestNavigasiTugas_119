@@ -71,5 +71,23 @@ fun DetailsScreen(
                 ) {
                     Text(text = "Beranda", color = Color.White, fontSize = 16.sp)
                 }
+                Button(
+                    onClick = {
+                        navController.navigate(Screen.Registration.route) {
+                            popUpTo(Screen.Registration.route) { inclusive = true }
+                        }
+                    },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 12.dp)
+                        .height(50.dp),
+                    shape = RoundedCornerShape(25.dp),
+                    colors = ButtonDefaults.buttonColors(containerColor = TealButtonLight)
+                ) {
+                    Text(text = "Formulir Pendaftaran", color = Color.White, fontSize = 16.sp)
+                }
             }
-            }
+        }
+    }
+}
+

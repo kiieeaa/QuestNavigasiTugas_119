@@ -57,4 +57,19 @@ fun DetailsScreen(
 
 
             Column(modifier = Modifier.padding(top = 32.dp)) {
+                Button(
+                    onClick = {
+                        navController.navigate(Screen.Splash.route) {
+                            popUpTo(Screen.Splash.route) { inclusive = true }
+                        }
+                    },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(50.dp),
+                    shape = RoundedCornerShape(25.dp),
+                    colors = ButtonDefaults.buttonColors(containerColor = TealMedium)
+                ) {
+                    Text(text = "Beranda", color = Color.White, fontSize = 16.sp)
+                }
+            }
             }

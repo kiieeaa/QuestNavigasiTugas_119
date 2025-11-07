@@ -112,4 +112,28 @@ fun RegistrationScreen(navController: NavController) {
                     if (nama.isEmpty() || alamat.isEmpty() || jenisKelamin.isEmpty() || statusPerkawinan.isEmpty()) {
                         Toast.makeText(context, "Harap isi semua field", Toast.LENGTH_SHORT).show()
                     } else {
+                        navController.navigate(
+                            Screen.Details.createRoute(
+                                nama = nama,
+                                kelamin = jenisKelamin,
+                                status = statusPerkawinan,
+                                alamat = alamat
+                            )
+                        )
+                    }
+                },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 32.dp)
+                    .height(50.dp),
+                shape = RoundedCornerShape(25.dp),
+                colors = ButtonDefaults.buttonColors(containerColor = TealMedium)
+            ) {
+                Text(text = "Submit", color = Color.White, fontSize = 16.sp)
+            }
+        }
+    }
+}
+
+}
                 }

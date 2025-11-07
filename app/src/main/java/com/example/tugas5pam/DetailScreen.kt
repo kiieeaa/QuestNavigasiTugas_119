@@ -28,3 +28,18 @@ fun DetailsScreen(
     Column(
         modifier = Modifier
             .fillMaxSize()
+            .background(TealAppBg)
+            .verticalScroll(rememberScrollState())
+    ) {
+
+        AppHeader(title = "List Daftar Peserta")
+
+
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(24.dp),
+            verticalArrangement = Arrangement.SpaceBetween
+        ) {
+
+            Column {
